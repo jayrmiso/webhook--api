@@ -9,7 +9,7 @@ router.post('/test/:token/:collectionid', (req, res) => {
 	const tokenid = req.params.token
 	const collectionid = req.params.collectionid
 	console.log(JSON.stringify(req.body.form_response.answers[0].file_url))
-	downloadFile(JSON.stringify(req.body.form_response.answers[0].file_url))
+	downloadFile(req.body.form_response.answers[0].file_url)
 	// const api = new Webflow({token: tokenid})
 	// const item = api.createItem({
     //    collectionId: collectionid,

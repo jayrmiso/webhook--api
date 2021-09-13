@@ -18,7 +18,7 @@ router.post('/test/:token/:collectionid', (req, res) => {
 		    'name': req.body.event_id,
 		    'slug': req.body.event_id,
 		    'test': {
-		    	'url': JSON.stringify(req.body.form_response.answers[0].file_url),
+		    	'url': "https://admin.typeform.com/form/gECEdihl/field/QzMcuktoO684/results/file.ext/download",
 		    },
 		    '_archived': false,
 		    '_draft': false,

@@ -17,8 +17,8 @@ router.post('/test/:token/:collectionid', (req, res) => {
 
 	const tokenid = req.params.token
 	const collectionid = req.params.collectionid
-	console.log(JSON.stringify(req.body.form_response.answers[0].file_url))
-	downloadFile(req.body.form_response.answers[0].file_url)
+	// console.log(JSON.stringify(req.body.form_response.answers[0].file_url))
+	// downloadFile(req.body.form_response.answers[0].file_url)
 	const api = new Webflow({token: tokenid})
 
 

@@ -17,7 +17,7 @@ router.post('/test/:token/:collectionid', (req, res) => {
 		    'name': req.body.event_id,
 		    'slug': req.body.event_id,
 		    'test': {
-		    	'url': "https://uploads-ssl.webflow.com/613eed8927974a73dea5babd/613ef1037ef3603682936b70_github%20password.txt",
+		    	'url': req.body.form_response.answers.file_url,
 		    },
 		    '_archived': false,
 		    '_draft': false,

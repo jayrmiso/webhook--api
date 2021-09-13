@@ -10,8 +10,8 @@ router.post('/test/:token/:collectionid', (req, res) => {
 	console.log(`TOKEN:`,tokenid)
 	console.log(`COLLECTION ID:`, collectionid)
 	const api = new Webflow({token: tokenid})
-	// console.log(req.body.form_response.answers[0].file_url)
-	// console.log(JSON.stringify(req.body.form_response.answers[0].file_url))
+	console.log(req.body.form_response.answers[0].file_url)
+	console.log(JSON.stringify(req.body.form_response.answers[0].file_url))
 	const item = api.createItem({
   		  collectionId: collectionid,
 		  fields: {

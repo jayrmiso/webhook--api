@@ -17,7 +17,7 @@ router.post('/test/:token/:collectionid', (req, res) => {
 		    'name': req.body.event_id,
 		    'slug': req.body.event_id,
 		    'test': {
-		    	'url': req.body.form_response.answers.file_url,
+		    	'url': req.body.form_response.answers[0].file_url,
 		    },
 		    '_archived': false,
 		    '_draft': false,

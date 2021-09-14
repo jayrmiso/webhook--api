@@ -13,6 +13,7 @@
     "@uploadcare/upload-client": "^1.1.5",
     "env-cmd": "^10.1.0",
     "express": "^4.17.1",
+    "file-url": "^4.0.0",
     "filestack-js": "^3.24.1",
     "nodejs-file-downloader": "^4.7.3",
     "nodemon": "^2.0.12",

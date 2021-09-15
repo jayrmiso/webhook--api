@@ -3,26 +3,21 @@ const router = new express.Router()
 const Webflow = require('webflow-api')
 const fs = require("fs");
 var path = require('path');
-
-
+const generateObject = require('../fields')
+console.log(generateObject)
 router.post('/test/:token/:collectionid', (req, res) => {
 
 	const tokenid = req.params.token
 	const collectionid = req.params.collectionid
 	const api = new Webflow({token: tokenid})
-	const item = api.createItem({
-       collectionId: collectionid,
-		  fields: {
-		    'name': req.body.event_id,
-		    'test': {
-		    	'url': req.body.form_response.answers[0].file_url,
-		    },
-		    '_archived': false,
-		    '_draft': false,
-		  },
-	});
-
-	item.then(i => console.log(i));
+	generateObject(req,(result) => {
+		const item = api.createItem({
+	 	     collectionId: collectionid,
+			 fields: result
+		});
+		item.then(i => 
+		console.log(`Successfully added a new record to a collection with an ID of: ${req.params.collectionid}`));
+	})
 	res.send(req.body)
 })
 
